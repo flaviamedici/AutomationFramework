@@ -1,10 +1,74 @@
-Review Software Business Requirements
-ChatGPT can assist with review and understand the Requirements for testing
-Prompt:
+##Review Software Business Requirements
+ChatGPT can assist with reviewing and understanding the Requirements for testing
+**Prompt:**
 "Review the following requirements for testability:
 User Story: As a user..."
 
-Assistance building a test plan
+##Assistance in building a test plan
 ChatGPT can provide a test plan template to get started
-Prompt:
-"Give me the templates of the different test plans for QA"
+**Prompt:**
+>"Give me the templates of the different test plans for QA"
+
+Assistance during test monitoring and control
+###Status Reporting: 
+**Prompt:**
+>Can you help me summarize our testing status, progress, and mention any challenges we're currently facing by writing the status report?
+**Follow-up questions from GPT**
+>We are currently in the integration testing phase of our e-commerce platform. 
+Our major milestones include completing API integration tests and validating the end-to-end flow. We have achieved 70% progress overall.
+One challenge we're facing is related to intermittent issues with third-party API responses, causing delays in our testing timeline.
+
+###Metrics Analysis
+QA team involved in testing an e-commerce platform. The team works with scrum methodology. Testers perform system testing 1 time per 2 weeks.
+And after each test cycle, the QA lead collects test metrics such as test execution time, defect density, and pass rates
+**Prompt:**
+>I'd like to analyze our test metrics. I will provide you and identify any trends or patterns. We have data on test execution times, and pass rates.
+Can you help me gain insights and suggest areas for improvement based on these metrics?
+**follow-up questions from GPT**
+>We've been tracking our test execution times over the last three test cycles. Here are the average times for each cycle: 
+Cycle 1 - 6 hours
+Cycle 2 - 6,7 hours
+Cycle 3 - almost 7 hours
+Defect density is currently at 2 defects per 100 test cases, and our overall pass rate is 90%
+
+###Assistance with Test Design of manual test cases
+QA Engineer needs to provide the test cases for the login form
+**prompt**
+>Generate me test cases for validating the login functionality of a web application that consists of 3 fields: name, email, and password
+>Write test cases for the password field using the boundary value and equivalence partitioning test design technique:
+Requirements:
+From 3 to 15 characters
+At least one letter in uppercase
+At least one number
+####For the basic functionality of the website
+**prompt:**
+>Give me a checklist for testing the e-commerce website that sells cosmetics
+
+###Assistance with writing a bug report
+ChatGPT can guide you through the process of writing a bug report, including what information to include, how to describe the issue, and how to prioritize and categorize the bug
+**promot:**
+>Provide guidance for writing a bug report, including what information to include, how to describe the issue, and how to prioritize and categorize the bug
+>Provide a template of a bug report for the functional bug:
+>Write me a bug report for the issue relying on this draft:
+Title:
+The contact form is submitted after filling in only one of the required fields
+Steps to reproduce:
+1. Open the website
+2. Navigate to the Java tab
+3. Click the button
+
+###Assistance while writing automation scripts
+Assist testers with writing automation test scripts by helping with script writing, troubleshooting, showing best practices, and other tasks.
+actions on the tools like Selenium, Appium, JUnit, TestNG
+**prompt**
+>Give me an example of an automation script (Python and Selenium)for the sign functionality of a web application
+**prompt**
+>Find the bug or error in the test script:
+...
+
+### Assistance in API testing
+
+
+
+
+
