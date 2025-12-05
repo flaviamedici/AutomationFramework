@@ -67,8 +67,39 @@ actions on the tools like Selenium, Appium, JUnit, TestNG
 ...
 
 ### Assistance in API testing
+Assistance for various aspects of the testing process, including creating requests, validating responses, and handling different scenarios
+**prompt**
+>Generate valid and invalid test JSON bodies for the username key-value pair when the username is a string 1-50 characters long
+{
+  "id":0,
+  "username": "string",
+  "firstName": "string",
+  "lastName" :"string",
+  "email" :"string"
+}
 
+QA can also ask ChatGPT to review the mistakes in the API requests
 
+Assistance in creating test tables, lists
+**prompt**
+>I need to create test tables for testing the purchase process of our website. Can you assist me in structuring test cases and organizing them into a table?
 
+QA Engineer can request ChatGPT to create a list with test cases to categorize them into Positive and Negative scenarios, and strength validation
+**prompt**
+>I'd like to categorize them into Positive and Negative Scenarios, and Strength Validation, showing them in a list
+
+Assistance in writing SQL queries
+**prompt**
+>Show me the database table with 100 users, 10 from Italy, 10 from the USA, 10 from India with ages from 20 to 66, single and married
+**prompt**
+>Type queries to see only users from the USA with an age from 30 to 40, single
+**prompt**
+>I will type queries, and you will reply with what the terminal should show. I want you to reply with a table query results in a single codeblock, nad nothing else.
+SELECT * FROM YourTableName
+WHERE Country = 'USA' AND Age BETWEEN 30 AND 40 AND MaritalStatus = 'Single'
+
+Assistance with data generation
+**prompt**
+>Generate 10 inouts with different users for testing the registration form. The registration form consists of Full Name, Email and Password fields
 
 
