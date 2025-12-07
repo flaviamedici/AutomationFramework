@@ -117,6 +117,40 @@ Company Name, Company ID, Tax ID, Legal Status, Fields of Business, Registered O
 **prompt**
 > Generate diverse financial transactions, account details, and currency exchanges to ensure accuracy and security in financial software
 
+### ALternatives to ChatGPt for Software Testing
+#### Gemini
+User story and test case creation
+**prompt**
+> Write me a user story for Full Name and Message input fields
+**prompt**
+> Write me the test cases for the user story:
+> As a website visitor, I want to enter my full name and message in a contact form so that I can reach out to the company for inquiries or support.
+> requirements for the full name and message fields
+> Only alphanumeric characters
+> from 5 to 20 characters long
+> at least one letter uppercase and lowercase
+Using Gemini for the correction of code
+**prompt**
+> Find the mistake and correct it (paste the part of the code that is failing)
+Using Gemini for test data generation
+**prompt**
+> Generate 10 examples of EU phone numbers, Generate 10 emails with the following Regex(XXX)
+Gemini extensions, Gemini can have access to your email and google drive account and grab infirnation from them
+**prompt**
+> Give me emails from Google on my email
+With Gemini you can also attach files and ask to find similar fomrs or write test cases based on the contents of the file
+
+#### Microsoft Copilot
+> copilot.microsoft.com
+**prompt**
+> Explain the importance of manual testing in the software development lifecycle
+**prompt**
+> Write me a user story for Full Name and Message input fields
+With Copilot you can pick different conversation styles based on your needs: conversational, creative, balanced, precise
+**prompt**
+> What is regression testing?
+
+#### Chatsonic AI
 
 
 
