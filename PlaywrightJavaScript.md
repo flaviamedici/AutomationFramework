@@ -25,3 +25,6 @@ open folder in Git Bash
 > npm run test
 
 Use await page.pause() to pause the script while running
+
+#### Troubleshooting
+
