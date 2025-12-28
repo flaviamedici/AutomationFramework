@@ -26,5 +26,102 @@ open folder in Git Bash
 
 Use await page.pause() to pause the script while running
 
-#### Troubleshooting
+Write a manual test case for the test scenario that you want to automate
+Positive scenario: Login with valid credentials
+1. Navigate to the www.testing101.net/ website
+2. Click on the Login button on the header
+3. Click on the Login button on the Signup page
+4. Input valid data into the Email field
+5. Input valid data into the Password field
+6. Click on the Login button of the Login form
+   **Expected result:** The user is successfully logged on the testing website
+Next step: Write a JS/Playwright script
+Under the tests folder, create a new file "1Login.spec.js"
+
+Open chatGPT and type: "Write JS/Playwright test script to open the https://www.testing101.net/
+
+Playwright Inspector: can provide suggestions for the locators for the elements you interact with. This saves time and ensures that the generated locators are optimized for stability and accuracy
+Add the command: await page.pause()
+Click the option to Pick Locator -> hover the mouse over the Consent button and click on it
+With the locator generated, go back to chatGPT and type Write a single line of JS.Playwright code to click on the button button.clasName
+
+test('Login with valid credentials', async ({ page }) => {
+// Navigate to the Testing101 website
+await page.goto('https://www.testing101.net/');
+await page.waitForTimeout(5000);
+//Click on the Consent button on Cookie pop-up
+//await page.getByLabel('Consent', { exact: true }).click();
+//Click on the Login button on the header
+await page.getByRole('button', { name: 'Log In' }).click();
+//Click on the Login button on the Signup page
+await page.getByTestId('signUp.switchToSignUp').click();
+//Input valid data into the Email field
+await page.getByLabel('Email').fill('andriitest7799@gmail.com');
+//Input valid data into the Password field
+await page.getByLabel('Password').fill('Aa123_123');
+//Click on the Login button of the Login form
+await page.getByTestId('buttonElement').click();
+
+Add assertion to the script
+Assertions are crucial for validating that the script is producing the correct results. They help ensure the automated test is passing or failing based on predefined conditions
+**prompt**: Add js/playwright assertion to check if this menu is displayed after login
+getByLabel('andriitest7799 account menu')
+// Assertion: Check if 'andriitest7799 account menu' is visible after login
+await expect(page.getByTestId('handle-button')).toBeVisible();
+});
+
+How a QA Enginenr can automate and run multiple login scenarions?
+1. Write manual test cases for the test scenarios that you want to automate
+
+Negative scenarios
+- Login with an empty Login FOrm field
+- Login with an empty email field
+- Login with an empty password field
+- Login with an invalid format of the email
+- Log In with an incorrect password
+- Log In with a non-existent user email
+
+test('Login with empty fields of the login form', async ({ page }) => {
+// Navigate to the Testing101 website
+await page.goto('https://www.testing101.net/');
+await page.waitForTimeout(5000);
+//Click on the Consent button on Cookie pop-up
+//await page.getByLabel('Consent', { exact: true }).click();
+//Click on the Login button on the header
+await page.getByRole('button', { name: 'Log In' }).click();
+//Click on the Login button on the Signup page
+await page.getByTestId('signUp.switchToSignUp').click();
+
+//Click on the Login button of the Login form
+await page.getByTestId('buttonElement').click();
+
+// Assertion: Check for error messages for both Email and Password fields
+await expect(page.getByText('Email cannot be blank')).toBeVisible();
+await expect(page.getByText('Make sure you enter a password.')).toBeVisible();
+
+});
+
+To run only one single test inside a js file add .only
+for example
+test.only('Login with invalid email format', async ({ page }) => {
+// Navigate to the Testing101 website
+await page.goto('https://www.testing101.net/');
+await page.waitForTimeout(5000);
+//Click on the Consent button on Cookie pop-up
+//await page.getByLabel('Consent', { exact: true }).click();
+//Click on the Login button on the header
+await page.getByRole('button', { name: 'Log In' }).click();
+//Click on the Login button on the Signup page
+await page.getByTestId('signUp.switchToSignUp').click();
+//Input valid data into the Email field
+await page.getByLabel('Email').fill('andriitest7799%gmail.com');
+//Input valid data into the Password field
+await page.getByLabel('Password').fill('Aa123_123');
+//Click on the Login button of the Login form
+await page.getByTestId('buttonElement').click();
+
+// Assertion: Check for error messages for both Email field
+await expect(page.getByText('Double check your email and try again.')).toBeVisible();
+});
+
 
