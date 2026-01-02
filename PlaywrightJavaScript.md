@@ -74,7 +74,7 @@ How a QA Enginenr can automate and run multiple login scenarions?
 1. Write manual test cases for the test scenarios that you want to automate
 
 Negative scenarios
-- Login with an empty Login FOrm field
+- Login with an empty Login Form field
 - Login with an empty email field
 - Login with an empty password field
 - Login with an invalid format of the email
@@ -124,4 +124,24 @@ await page.getByTestId('buttonElement').click();
 await expect(page.getByText('Double check your email and try again.')).toBeVisible();
 });
 
-
+Manual test case for the scenario "Add a new address in My Account"
+1. navigate to the www.testing101.net website
+2. Click on the Login button on the header
+3. Click on the Login button on the Signup page
+4. Input valid data into the Email field
+5. Input valid data into the Password field
+6. Click on the button of the Login form
+7. Click on Account menu on the header
+8. Click on My Addresses in the navigation menu
+9. Click on New Address button
+10. Fill in First Name field
+11. Fill in Last Name field
+12. Fill in Company Name field
+13. Fill in Address field
+14. Fill in Address line 2 field
+15. Fill in City field
+16. Fill in Country field
+17. Fill in Zip code/Postal Code field
+18. Fill in Phone field
+19. Click on Add Address button
+20. Verify that the new Address added
