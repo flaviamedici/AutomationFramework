@@ -145,3 +145,22 @@ Manual test case for the scenario "Add a new address in My Account"
 18. Fill in Phone field
 19. Click on Add Address button
 20. Verify that the new Address added
+
+Create a manual test case for the End-to-End Purchase Flow for a Single Product
+1. Navigate to the www.testing101.net/category/all-products
+2. Click on the Sorting option of the Filter tab
+3. Click on the Add To Cart button on the Americano product
+4. Click on the View Cart button on the Cart sidebar
+5. Click on the Checkout button on the My Cart page
+6. Fill in Email field
+7. Fill in First Name field
+8. Fill in Last Name field
+9. Fill in Phone field
+10. Choose Country/Region in the drop-down menu
+11. Fill in Address field
+12. Fill in City field
+13. Fill in Zip/Postal code field
+14. Click on Continue button on the first step of the checkout
+15. Clink on Continue button on the second step of the checkout
+16. Click on Place Order & Pay button
+17. Verify the confirmation message appearance
