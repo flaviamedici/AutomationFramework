@@ -164,3 +164,48 @@ Create a manual test case for the End-to-End Purchase Flow for a Single Product
 15. Clink on Continue button on the second step of the checkout
 16. Click on Place Order & Pay button
 17. Verify the confirmation message appearance
+
+____________________________________________________________________________________________________________________
+
+QA Engineer must understand the basics of automation to effectivelly implement it in real-world scenario
+
+#### Xpath Playwright Locators
+Xpath is a query language used for selecting nodes from an XML document. It's commonly associated with XML, but it's also applicable to HTML documents
+Xpath is commonly used to locate elements within a web page for automated testing purposes
+Two main types:
+- Absolute Xpath: starts from the root node of the HTML document and includes the complete path to the element being located. It begins with a single forward slash.
+- Relative Xpath: start from any node in the document, not necessarily the root, and are based on the relationship between elements
+//input[@id='username]
+
+##### Xpath selector
+Using website hhtp://www.testing101.net/playwrightlocators
+
+**//tag**
+Uses the HTML tag name to locate elements. It can return multiple elements with the same tag name
+
+**//tag[text()='text']**
+allows you to locate elements based on their contained text. This is particularly useful when you want to find elements that have specific text content, such as buttons with specific labels, headings, links, and more
+
+**//tag[@attribute='value']**
+It allows you to target elements that have specific attribute-value combinations
+
+**(_//*_)**
+* (asterisk) is a wildcard character that represents any element node. It's used to select all elements regardless of their tag name
+
+##### Xpath functions and operators
+**and**
+The and operator is used to combine multiple conditions, and it returns true if both conditions are satisfied 
+//tag[text()='text' and @attribute='value')] 
+
+**or**
+The or operator is used to combine conditions, and it returns true if at least one of the conditions is satisfied.
+//tag[text()='text' or @attribute='value']
+
+**contains**
+The contains() function in XPath is used to find elements whose attribute values contain a specific substring.
+//tag[contains(text(), 'text')]
+//tag[contains(@attribute, 'value')]
+
+**//parent//child**
+Double slash // can be used to traverse the DOM hierarchy without specifying the exact path 
+//tag//tag
