@@ -209,3 +209,5 @@ The contains() function in XPath is used to find elements whose attribute values
 **//parent//child**
 Double slash // can be used to traverse the DOM hierarchy without specifying the exact path 
 //tag//tag
+
+The .waitFor() method in Playwright is a powerful tool for synchronizing your tests with the browser's actions. It allows you to pause your test execution until a specific condition is met, ensuring that your tests are reliable and don't fail due to timing issues.
