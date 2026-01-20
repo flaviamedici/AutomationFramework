@@ -211,3 +211,16 @@ Double slash // can be used to traverse the DOM hierarchy without specifying the
 //tag//tag
 
 The .waitFor() method in Playwright is a powerful tool for synchronizing your tests with the browser's actions. It allows you to pause your test execution until a specific condition is met, ensuring that your tests are reliable and don't fail due to timing issues.
+
+### Page Object Model
+Design pattern commonly used in test automation to create an abstraction layer for web elements on a page
+How does it work?
+The POM helps organize your code by grouping interactions into a single class (a JS file you create in your project)
+Using POM simplifies maintenance, as changes to elements or interaction logic only need to be updated in one place rather than across all tests
+Step-by-step:
+1. Create a new folder for Page Object (Common)
+2. Create a JS File for URLs (URLs.js)
+3. Define a class for URLs
+4. Import and Use the URLs Class in your Test Files
+
+
