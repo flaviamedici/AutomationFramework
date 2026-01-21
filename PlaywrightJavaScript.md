@@ -223,4 +223,21 @@ Step-by-step:
 3. Define a class for URLs
 4. Import and Use the URLs Class in your Test Files
 
+**Methods** are blocks of code defined within a class, designed to perform a specific task or action. In the context of automation, methods allow us to encapsulate actions like clicking a button, entering text, or interacting with a pop-up, so we don't have to repeat the same code across multiple test cases
+**Constructor** is a special JavaScript function in a class that is called when we create a new instance of the class. It is used to initialize the object with the necessary properties or values.
+**Async functions** are very common to use in POM classes. This is important in automation, where page interactions often involve waiting for dynamic content to load. Async functions in classes ensure the code runs in the correct order and help avoid errors related to timing or delays.
+
+Define a class -> define constructor -> Add Methods -> Export the class
+class consentPopup() {
+  constructor(page) {
+  this.page = page;
+  }
+  async methodName() {
+  await expect(this.page.locator("xpath=")).toBeVisible();
+
+  const button = this.page.locator("xpath=");
+  await button.click()
+  }
+}
+export {consentPop}
 
