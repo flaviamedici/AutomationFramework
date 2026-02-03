@@ -13,3 +13,5 @@ Input in chatGPT
 >3. Email pattern field: pattern="^.+@.+\.[a-zA-Z]{2,63}$"
 >4. Confirm email field pattern: pattern="^.+@.+\.[a-zA-Z]{2,63}$"
 
+**prompt**
+>Write a Selenium Java test script with test NG for opening the https://www.testing101.net/seleniumlocators webpage
