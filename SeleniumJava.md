@@ -106,3 +106,19 @@ Add the following sample code, making sure to update the driver path if you didn
 
 Run the script by clicking the Run button that appears above the main method or by right-clicking the file in the Java Projects panel and selecting Run Java. 
 A Chrome browser instance should open, navigate to Google, print the page title to the console, and then close.
+
+#### Selenium WebDriver Browser Options
+>options.addArguments("start-maximized");
+The browser will start in maximized mode, meaning the browser window will open in full-screen size.
+
+>options.addArguments("--window-size=x,y");
+The browser will launch the initial window size according to the specified parameters.
+
+>options.addArguments("--lang=en");
+This line sets the language of the browser to English("en"). This option is used to simulate usersfrom different regions by setting the browser language accordingly
+
+>options.addArguments("--incognito")
+The browser will open incognito mode or private browsing mode. In this mode, the browser will not store cookies, history, or any other data after the session is closed.
+
+>options.addArguments("--headless")
+The browser will run in the background without displaying a graphical user interface (GUI). Ti is commonly used for automated testing or web scraping tasks where rendering the GUI is not necessary.
