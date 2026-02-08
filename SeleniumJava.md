@@ -1,4 +1,4 @@
-Input in chatGPT
+#### Input in chatGPT
 **prompt**
 >Write a user story with acceptance criteria for the "Find Elements" form on the https://www.testing101.net/seleniumlocators website, which consists of:
 >1. First Name field: max length - 100 characters long
@@ -60,20 +60,22 @@ Follow the prompts to select a location, enter a Group Id and Artifact Id (proje
 Once the project is open, you need to add the Selenium Java library dependency to the pom.xml file. 
 In the Explorer, open the pom.xml file.
 Add the following dependency within the <dependencies> tag: 
-
+```
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>4.x.x</version> <!-- Use the latest stable version -->
 </dependency>
+```
+
 Save the file. Maven will automatically download the necessary libraries. 
 
 4. Download Web Browser Driver 
 You need a browser-specific driver (e.g., ChromeDriver for Google Chrome) to automate the browser. 
 
 Download the appropriate driver from the official sources:
-ChromeDriver https://developer.chrome.com/docs/chromedriver/downloads
-GeckoDriver (Firefox) https://github.com/mozilla/geckodriver/releases
+[ChromeDriver] (https://developer.chrome.com/docs/chromedriver/downloads)
+[GeckoDriver(Firefox)] (https://github.com/mozilla/geckodriver/releases)
 Place the downloaded executable file in a central location on your computer.
 Optional: Add the driver's directory to your system's PATH environment variable for easier access. Alternatively, you can specify the path in your test code
 
@@ -82,43 +84,44 @@ In your project's src/main/java (or src/test/java) folder, you can create a Java
 Create a new Java file, for example, SeleniumTest.java.
 Add the following sample code, making sure to update the driver path if you didn't add it to the system PATH: 
 
->import org.openqa.selenium.WebDriver;
->import org.openqa.selenium.chrome.ChromeDriver;
->
->public class SeleniumTest {
->    public static void main(String[] args) {
->        // Set the path to your Chromedriver executable (if not in PATH)
->        System.setProperty("webdriver.chrome.driver", "C:/path/to/your/chromedriver.exe"); // Example path for Windows
->
->        // Initialize the ChromeDriver
->        WebDriver driver = new ChromeDriver();
->
->        // Navigate to a website
->        driver.get("https://www.google.com");
->
->        // Print the title of the page
->        System.out.println("Page title is: " + driver.getTitle());
->
->        // Close the browser
->        driver.quit();
->    }
->}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
+```
+public class SeleniumTest {
+    public static void main(String[] args) {
+        // Set the path to your Chromedriver executable (if not in PATH)
+        System.setProperty("webdriver.chrome.driver", "C:/path/to/your/chromedriver.exe"); // Example path for Windows
+
+        // Initialize the ChromeDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to a website
+        driver.get("https://www.google.com");
+
+        // Print the title of the page
+        System.out.println("Page title is: " + driver.getTitle());
+
+        // Close the browser
+        driver.quit();
+    }
+}
+```
 Run the script by clicking the Run button that appears above the main method or by right-clicking the file in the Java Projects panel and selecting Run Java. 
 A Chrome browser instance should open, navigate to Google, print the page title to the console, and then close.
 
 #### Selenium WebDriver Browser Options
->options.addArguments("start-maximized");
+```options.addArguments("start-maximized");```
 The browser will start in maximized mode, meaning the browser window will open in full-screen size.
 
->options.addArguments("--window-size=x,y");
+```options.addArguments("--window-size=x,y");```
 The browser will launch the initial window size according to the specified parameters.
 
->options.addArguments("--lang=en");
+```options.addArguments("--lang=en");```
 This line sets the language of the browser to English("en"). This option is used to simulate usersfrom different regions by setting the browser language accordingly
 
->options.addArguments("--incognito")
+```options.addArguments("--incognito");```
 The browser will open incognito mode or private browsing mode. In this mode, the browser will not store cookies, history, or any other data after the session is closed.
 
->options.addArguments("--headless")
+```options.addArguments("--headless");```
 The browser will run in the background without displaying a graphical user interface (GUI). Ti is commonly used for automated testing or web scraping tasks where rendering the GUI is not necessary.
