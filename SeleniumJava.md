@@ -125,3 +125,27 @@ The browser will open incognito mode or private browsing mode. In this mode, the
 
 ```options.addArguments("--headless");```  
 The browser will run in the background without displaying a graphical user interface (GUI). Ti is commonly used for automated testing or web scraping tasks where rendering the GUI is not necessary.  
+
+```
+public class BrowserOptionsTest {
+    @Test
+    public void openGoogleChrome() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "D:\\Selenium_sample\\chromedriver-win32\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        
+        options.addArguments("--start-maximize");
+        //options.addArguments("--window-size=500,500");
+        //options.addArguments("lang=fr");
+        options.addArguments("lang=en");
+        //options.addArguments("--incognito");
+        //options.addArguments("--headless");
+        options.setExperimentalOption("useAutomationExtension", false);
+        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com");
+        Thread.sleep(5000);
+        driver.quit();
+
+    }
+}
+```
