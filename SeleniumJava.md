@@ -149,3 +149,14 @@ public class BrowserOptionsTest {
     }
 }
 ```
+
+### TestNG ###
+TestNG is a testing framework for Java
+Designed to simplify a broad range of testing needs, from unit testing to integration testing. The NG in TestNG stands for "Next Generation." It provides powerful features and functionalities that make it particularly suitable for test automation in Java applications.
+
+In Selenium/Java, testNG is often used as the testing framework to organize and execute test cases efficiently by adding TestNG annotations, TestNG Assertions, Generate Reports, etc.
+
+In the context of Selenium/Java automation testing, TestNG assertions are used to validate Elements, Text, Attributes and other properties of web elements on a webpage.
+The main assertion methods provides byTestNG include: Assert.assertEquals, Assert.assertNotEquals, assertTrue, assertFalse, assertNotNull, assertNull
+
+- Assert.assertEquals(actualValue, expectedValue)
