@@ -159,10 +159,11 @@ In Selenium/Java, testNG is often used as the testing framework to organize and 
 In the context of Selenium/Java automation testing, TestNG assertions are used to validate Elements, Text, Attributes and other properties of web elements on a webpage.
 The main assertion methods provides byTestNG include: Assert.assertEquals, Assert.assertNotEquals, Assert.assertTrue, Assert.assertFalse, Assert.assertNotNull, Assert.assertNull  
   
->Assert.assertEquals(actualValue, expectedValue)
+>Assert.assertEquals(actualValue, expectedValue)  
 When assertEquals is called, thestNG compares the actual and expected values. If they are equal, the test continues to execute without any interruption. However, if they are not equal, testNG marks the test as failed, and any subsequent code in the test method is not executed.  
   
->Assert.assertNotEquals(actualValue, expectedValue)
-When you use Assert.assertNotEquals(actualValue, expectedValue), testNG compares the actualValue with the expectedValue. If they are equal, the assertion fails, and testNG will mark the test as failed
-
->Assert.assertTrue()
+>Assert.assertNotEquals(actualValue, expectedValue)  
+When you use Assert.assertNotEquals(actualValue, expectedValue), testNG compares the actualValue with the expectedValue. If they are equal, the assertion fails, and testNG will mark the test as failed  
+  
+>Assert.assertTrue(condition)
+Assertion method used to verify that a given condition evaluates to true. If the condition evaluates to false, the test will fail  
