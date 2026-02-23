@@ -159,11 +159,49 @@ In Selenium/Java, testNG is often used as the testing framework to organize and 
 In the context of Selenium/Java automation testing, TestNG assertions are used to validate Elements, Text, Attributes and other properties of web elements on a webpage.
 The main assertion methods provides byTestNG include: Assert.assertEquals, Assert.assertNotEquals, Assert.assertTrue, Assert.assertFalse, Assert.assertNotNull, Assert.assertNull  
   
->Assert.assertEquals(actualValue, expectedValue)  
+>Assert.assertEquals(actualValue, expectedValue)
 When assertEquals is called, thestNG compares the actual and expected values. If they are equal, the test continues to execute without any interruption. However, if they are not equal, testNG marks the test as failed, and any subsequent code in the test method is not executed.  
   
 >Assert.assertNotEquals(actualValue, expectedValue)  
 When you use Assert.assertNotEquals(actualValue, expectedValue), testNG compares the actualValue with the expectedValue. If they are equal, the assertion fails, and testNG will mark the test as failed  
   
->Assert.assertTrue(condition)
-Assertion method used to verify that a given condition evaluates to true. If the condition evaluates to false, the test will fail  
+>Assert.assertTrue(condition)  
+condition: this parameter represents the condition that you want to test. It can be any expression that returns a Boolean value  
+  
+>Assert.assertFalse(condition)  
+In TestNG, this is an assertion method used to verify that a given condition is false. If the condition is true, the assertion fails, indicating that the expected condition does not hold true.  
+  
+>Assert.assertNotNull(Object object)  
+In testing frameworks like TestNG or JUnit, this is an assertion method used to verify that a given object reference is not null. If the object reference is not null, the assertion passes. However, if the object reference is null, the test fails.  
+  
+>Assert.assertNull(Object object)  
+In testing frameworks like TestNG or JUnit, this is an assertion method used to verify that a given object reference is null. If the object reference is indeed null, the assertion passes. However, if the object reference is not null, the test fails.
+
+### Test Report for Selenium Java test script using TestNG 
+A test report is a formal document that summarizes the results and findings of software testing activities. It provides stakeholders with essential information about the quality, functionality, and performance of the software being tested.  
+  
+#### TestNG Reporting features
+Provides listeners that allow you to generate detailed HTML reports of your test executions  
+Listeners allow users to monitor and customize the test execution process. These components enable developers and testers to perform various actions or capture events before, during, or after the execution of test cases.  
+**ExtendReportListener**
+It is a custom listener implementation designed to integrate ExtendReports with TestNG, allowing for enhanced reporting capabilities during test execution. This listener is particularly useful for generating rich and interactive HTML reports using the ExtendReports library in conjunction with TestNG-based test automation frameworks.  
+ExtendReports library is an open-source reporting library for Java and .NET frameworks that provides enhanced reporting capabilities for test automation projects. It is commonly used in conjunction with testing frameworks such as TestNG, JUnit, and NUnit to generate detailed and visually appealing reports of test execution results.  
+
+#### Integrate ExtendReports into Selenium/Java test script:
+1. Add TestNG and ExtendReports dependencies to an integrated development environment  
+[https://mvnrepository.com/artifact/com.aventstack/extentreports/5.0.9]
+Add the following code to pom.xml
+```
+<!-- Source: https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+    <scope>compile</scope>
+</dependency>
+```
+
+2. Write and add the ExtendReports listeners class to the project
+**prompt**
+Give me an example of the ExtendReportListener
+4. Add Report Generation object to the test script
